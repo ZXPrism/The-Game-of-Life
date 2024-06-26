@@ -144,12 +144,14 @@ int main(int argc, char *argv[])
     });
 
     app.RegisterOnKeyFunc([&](int key, int scanCode, int action, int mods) {
-        static bool trigger = false;
-
-        if (!trigger && key == SDLK_RETURN)
+        if (!gameStarted && key == SDLK_RETURN)
         {
             gameStarted = true;
-            trigger = true;
+        }
+        else if (key == SDLK_BACKSPACE)
+        {
+            gameStarted = false;
+            gridsFront = std::vector<std::vector<int>>(gridResolutionChoice, std::vector<int>(gridResolutionChoice));
         }
     });
 

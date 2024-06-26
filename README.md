@@ -15,6 +15,7 @@
 2. Set the window resolution*, grid resolution* and animation speed*.
 3. Set the initial configuration by clicking.
 4. Press `enter` to start the game.
+5. Press `backspace` to reset.
 
 ## Example
 ![example](example.gif)
